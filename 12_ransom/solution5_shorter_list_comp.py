@@ -14,7 +14,7 @@ def get_args():
         description='Ransom Note',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('text', metavar='str', help='Input text or file')
+    parser.add_argument('text', metavar='text', help='Input text or file')
 
     parser.add_argument('-s',
                         '--seed',
@@ -32,6 +32,17 @@ def get_args():
 
 
 # --------------------------------------------------
+def main():
+    """Make a jazz noise here"""
+
+    args = get_args()
+    random.seed(args.seed)
+
+    # Method 5: List comprehension
+    print(''.join([choose(char) for char in args.text]))
+
+
+# --------------------------------------------------
 def choose(char):
     """Randomly choose an upper or lowercase letter to return"""
 
@@ -42,23 +53,13 @@ def choose(char):
 def test_choose():
     """Test choose"""
 
+    state = random.getstate()
     random.seed(1)
     assert choose('a') == 'a'
     assert choose('b') == 'b'
     assert choose('c') == 'C'
     assert choose('d') == 'd'
-    random.seed(None)
-
-
-# --------------------------------------------------
-def main():
-    """Make a jazz noise here"""
-
-    args = get_args()
-    random.seed(args.seed)
-
-    # Method 6: map
-    print(''.join(map(choose, args.text)))
+    random.setstate(state)
 
 
 # --------------------------------------------------
