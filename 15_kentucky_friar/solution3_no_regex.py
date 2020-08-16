@@ -38,15 +38,12 @@ def main():
 def fry(word):
     """Drop the `g` from `-ing` words, change `you` to `y'all`"""
 
-    ing_word = re.search('(.+)ing$', word)
-    you = re.match('([Yy])ou$', word)
+    if word.lower() == 'you':
+        return word[0] + "'all"
 
-    if ing_word:
-        prefix = ing_word.group(1)
-        if re.search('[aeiouy]', prefix, re.IGNORECASE):
-            return prefix + "in'"
-    elif you:
-        return you.group(1) + "'all"
+    if word.endswith('ing'):
+        if any(map(lambda c: c.lower() in 'aeiouy', word[:-3])):
+            return word[:-1] + "'"
 
     return word
 

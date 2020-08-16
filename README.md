@@ -4,6 +4,8 @@ This is the code repository for the Manning Publications book, _Tiny Python Proj
 
 https://www.manning.com/books/tiny-python-projects?a_aid=youens&a_bid=b6485d52
 
+http://tinypythonprojects.com/
+
 There is a directory for each chapter of the book.
 Each directory contains a `test.py` program you can use with `pytest` to check that you have written the program correctly.
 I have included a short README to describe each exercise.
@@ -48,6 +50,14 @@ Here are the videos I've completed so far:
 * [Chapter 12: Ransom](https://www.youtube.com/playlist?list=PLhOuww6rJJNMxWhckg7FO4cEx57WgHbd_): Writing a Python program that will randomly capitalize letters in a given piece of text for the nefarious purpose of creating a ransom note. Exploration of for loops, list comprehensions, and the map() function.
 
 * [Chapter 13: Twelve Days of Christmas](https://www.youtube.com/playlist?list=PLhOuww6rJJNNZEMX12PE1OvSKy02UQoB4): Writing a Python program to create the verses for "The Twelve Days of Christmas" from a given day. Learning how to write a function and the test for it, then using the function in a list comprehension and a map to generate the output.
+
+* [Chapter 14: The Rhymer](https://www.youtube.com/playlist?list=PLhOuww6rJJNPNn2qa5ATHJ0qd-JUgM_s0): Writing a Python program that can split off any initial consonants from a word and append a list of prefixes to create new rhyming "words." Exploration of regular expressions to handle words with no initial consonants, with one or more leading consonants, and nothing but consonants. Writing a `stemmer()` function and the `test_stemmer()` function to understand it. Using list comprehensions with guard statements and how that relates to the `filter()` function.
+
+* [Chapter 15: The Kentucky Friar](https://www.youtube.com/playlist?list=PLhOuww6rJJNMflxi3aRAQTqG7mvOXRObW): In this chapter we delve further into regular expressions, first learning how to split a string using a regex so we can separate things that look like "words" from non-words like punctuation and whitespace. Then we try to identify the word "you" (case-insensitive) to turn into "y'all" and any 2-syllable words ending in "-ing" so we can replace the final "g" with an apostrophe so that "cooking" becomes "cookin'" but "swing" would remain "swing." We then apply this to an entire body of text to Kentucky fry the words with amusing results.
+
+* [Chapter 16: The Scrambler](https://www.youtube.com/playlist?list=PLhOuww6rJJNPcLby3JXlKSo6duCIjh93S): Writing a Python program to find each "word" in a body of text and then scramble the letters such that the first and last letters remain in place, then reconstructing the text for output. Using regular expressions to split text, using `random.shuffle()` and understanding in-place mutation vs returning a new value. Comparing `for` loops to list comprehensions and the "map()" function.
+
+* [Chapter 17: Mad Libs](https://www.youtube.com/playlist?list=PLhOuww6rJJNPnNx_Emds00y2RX1Tbk59r): Writing a Python program to play the classic Mad Libs game. Reading an input file with placeholders for parts of speech like "adjective" or "noun." Getting the inputs to replace those from the user interactively via the "input()" function or taking them from the command-line arguments. Using regular expressions to find and replace the placeholders. Learning about greedy regex and how to make them not greedy. Using the `re.findall()` and `re.sub()` functions. Using `sys.exit()` to prematurely exit a program with an error message/value.
 
 # Forking GitHub repo
 
